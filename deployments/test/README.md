@@ -1,10 +1,10 @@
 # Test deployment
 
-Stands up the full auth-gateway stack into an AWS account for validation.
+Stands up the full terraform-aws-idm stack into an AWS account for validation.
 
 ## What it creates
 
-- A Cognito user pool (`auth-gateway-test`) with the `custom:okta_groups` attribute.
+- A Cognito user pool (`idm-test`) with the `custom:okta_groups` attribute.
 - The group-sync pre-token-generation Lambda + IAM role + log group.
 - A hosted UI domain.
 - One demo app: web client (PKCE), M2M client (client credentials), a resource
@@ -29,7 +29,7 @@ If apply fails with a domain-already-exists error, set a different
 `domain_prefix` (it must be globally unique):
 
 ```bash
-terraform apply -var 'domain_prefix=auth-gateway-test-<something-unique>'
+terraform apply -var 'domain_prefix=idm-test-<something-unique>'
 ```
 
 ## Smoke test (M2M, no Okta needed)

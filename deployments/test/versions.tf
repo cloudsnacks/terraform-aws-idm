@@ -18,7 +18,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Project   = "auth-gateway"
+      Project   = "terraform-aws-idm"
       Env       = "test"
       ManagedBy = "terraform"
     }

@@ -1,7 +1,7 @@
-# auth-gateway / app
+# terraform-aws-idm / app
 
 Per-application authorization within a shared Cognito user pool created by the
-parent `auth-gateway` bootstrap module.
+parent `terraform-aws-idm` bootstrap module.
 
 Creates, for one application:
 

@@ -13,7 +13,7 @@ module "auth_gateway" {
   okta_oidc_issuer        = var.okta_oidc_issuer
 
   tags = {
-    Project = "auth-gateway"
+    Project = "terraform-aws-idm"
     Env     = "prod"
   }
 }

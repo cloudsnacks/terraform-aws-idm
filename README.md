@@ -1,4 +1,4 @@
-# auth-gateway
+# terraform-aws-idm
 
 A Terraform IDM module that uses **Okta** as the identity source (users & groups)
 and **Amazon Cognito** as the application authorization layer (app auth rules,
@@ -41,7 +41,7 @@ API scopes, and groups — without requesting additional Okta apps.
 
 ```hcl
 module "auth_gateway" {
-  source = "github.com/swibrow/auth-gateway"
+  source = "github.com/cloudsnacks/terraform-aws-idm"
 
   name   = "acme-idm"
   domain = "acme-idm"
@@ -52,7 +52,7 @@ module "auth_gateway" {
 }
 
 module "portal" {
-  source = "github.com/swibrow/auth-gateway//modules/app"
+  source = "github.com/cloudsnacks/terraform-aws-idm//modules/app"
 
   name         = "portal"
   user_pool_id = module.auth_gateway.user_pool_id
@@ -96,6 +96,6 @@ reads `custom:okta_groups` and injects `cognito:groups` / role claims. The
 | Name      | Version   |
 | --------- | --------- |
 | terraform | >= 1.5    |
-| aws       | >= 5.0    |
+| aws       | >= 6.0    |
 
 See `variables.tf` for the full set of inputs and `outputs.tf` for outputs.

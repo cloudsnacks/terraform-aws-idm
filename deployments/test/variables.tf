@@ -7,13 +7,13 @@ variable "region" {
 variable "name" {
   description = "Name of the user pool / resource prefix."
   type        = string
-  default     = "auth-gateway-test"
+  default     = "idm-test"
 }
 
 variable "domain_prefix" {
   description = "Globally-unique Cognito hosted UI domain prefix. Change this if apply fails with a domain-taken error."
   type        = string
-  default     = "auth-gateway-test-3f9a"
+  default     = "idm-test-3f9a"
 }
 
 # ---------------------------------------------------------------------------
